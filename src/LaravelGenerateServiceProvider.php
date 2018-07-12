@@ -13,8 +13,7 @@ class LaravelGenerateServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('model.generate', ModelGenerateCommand::class);
-
+        $this->app->bind(ModelGenerateCommand::class);
         $this->commands([
             ModelGenerateCommand::class,
         ]);

@@ -8,7 +8,7 @@ class MigrationCreator extends LaravelMigrationCreator
 {
     public function stubPath()
     {
-        return __DIR__.'/../../resources/stubs';
+        return __DIR__.'/../../resources/stubs/migrations';
     }
 
     /**
