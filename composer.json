@@ -1,0 +1,35 @@
+{
+    "name": "bitpress/laravel-generate",
+    "description": "Code generation commands",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Redmond",
+            "email": "paulrredmond@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/console": "5.6.*",
+        "illuminate/support": "5.6.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2",
+        "orchestra/testbench": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "BitPress\\LaravelGenerate\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BitPress\\LaravelGenerate\\LaravelGenerateServiceProvider"
+            ]
+        }
+    }
+}
