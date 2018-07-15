@@ -62,7 +62,7 @@ class ModelGenerateCommand extends GeneratorCommand
 
         $this->writeMigration($name, $table, $create, $this->argument('columns') ?? []);
 
-        // @todo dump the composer autoloader
+        $this->composer->dumpAutoloads();
     }
     
     /**
