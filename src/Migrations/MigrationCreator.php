@@ -101,10 +101,10 @@ class MigrationCreator extends LaravelMigrationCreator
      */
     protected function parseField($fieldArg)
     {
-        $parts = explode(':', $fieldArg);
         $field = new DatabaseField();
-        
-        switch (count($field)) {
+        $parts = explode(':', $fieldArg);
+
+        switch (count($parts)) {
             // eg: title
             case 1:
                 $field->setName($parts[0])
