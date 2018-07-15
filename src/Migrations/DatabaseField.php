@@ -24,6 +24,10 @@ class DatabaseField
      */
     private $tableVar = '$table';
 
+    /**
+     * @param  string $name The database column name
+     * @return self
+     */
     public function setName($name)
     {
         $this->name = $name;
@@ -31,6 +35,10 @@ class DatabaseField
         return $this;
     }
 
+    /**
+     * @param  string $type The database field type
+     * @return self
+     */
     public function setType($type)
     {
         // @todo validate type
@@ -39,6 +47,10 @@ class DatabaseField
         return $this;
     }
 
+    /**
+     * @param  string $index The database index name for this field
+     * @return self
+     */
     public function setIndex($index)
     {
         $this->index = $index;
@@ -46,6 +58,12 @@ class DatabaseField
         return $this;
     }
 
+    /**
+     * Override the migration table variable name
+     *
+     * @param  string The PHP variable representing the table in a migration
+     * @return self
+     */
     public function setTableVar($name)
     {
         $this->tableVar = $name;
